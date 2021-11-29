@@ -11,7 +11,7 @@
                   <?php
                     ini_set('max_execution_time', 0);     
                     include "script.php";
-                    $conn = mysqli_connect("localhost","root","","neural_network");
+                    $conn = mysqli_connect("localhost", "dodinove_dodinove", "hs5N+=TueF-Z", "dodinove_backpropagation");
                     require_once('./assets/vendor/php-excel-reader/excel_reader2.php');
                     require_once('./assets/vendor/SpreadsheetReader.php');
                     if (isset($_POST["import"]))

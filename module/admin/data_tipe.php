@@ -19,7 +19,7 @@
                       <div class="col-md-12">
                          <a href="?module=input_tipe"><button type="button" class="btn btn-primary">Tambahkan Data Tipe</button></a>
                  <?php
-                        $conn = mysqli_connect("localhost","root","","neural_network");
+                        $conn = mysqli_connect("localhost", "dodinove_dodinove", "hs5N+=TueF-Z", "dodinove_backpropagation");
                         $sqlSelect = "SELECT * FROM tipe";
                         $result = mysqli_query($conn, $sqlSelect);                  
                     ?>                       

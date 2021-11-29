@@ -19,7 +19,7 @@
                       <div class="col-md-12">
                          <a href="?module=input_jenis"><button type="button" class="btn btn-primary">Tambahkan Data Jenis</button></a>
                  <?php
-                        $conn = mysqli_connect("localhost","root","","neural_network");
+                        $conn = mysqli_connect("localhost", "dodinove_dodinove", "hs5N+=TueF-Z", "dodinove_backpropagation");
                         $sqlSelect = "SELECT * FROM jenis";
                         $result = mysqli_query($conn, $sqlSelect);                                
                     ?>                       
