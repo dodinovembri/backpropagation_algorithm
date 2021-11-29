@@ -13,7 +13,7 @@
               <div class="row">
                 <div class="col-md-12">
                  <?php
-                        $conn = mysqli_connect("localhost","root","","nadia");
+                        $conn = mysqli_connect("localhost","root","","neural_network");
                         $sqlSelect = "SELECT stand.stand as stand, merk.merk as merk, tipe.tipe as tipe, jenis.jenis as jenis, prediksi.prediksi as target FROM dt_training JOIN tipe ON dt_training.tipe = tipe.id_tipe JOIN stand ON dt_training.stand = stand.id_stand JOIN merk ON dt_training.merk = merk.id_merk JOIN jenis ON dt_training.jenis = jenis.id_jenis JOIN prediksi ON dt_training.target = prediksi.id_prediksi GROUP BY merk, tipe, stand, jenis";
                         // $sqlSelect = "SELECT * FROM dt_training GROUP BY merk, tipe, stand, jenis";
                         $result = mysqli_query($conn, $sqlSelect); ?>
@@ -62,7 +62,7 @@
   </div>
 
   <footer class="main-footer">
-    <strong>Copyright &copy; 2019 <a href="#">Nadia</a>.</strong> All rights
+    <strong>Copyright &copy; 2021.</strong> All rights
     reserved.
   </footer>
 

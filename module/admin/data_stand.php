@@ -19,7 +19,7 @@
                       <div class="col-md-12">
                          <a href="?module=input_stand"><button type="button" class="btn btn-primary">Tambahkan Data Stand</button></a>
                  <?php
-                        $conn = mysqli_connect("localhost","root","","nadia");
+                        $conn = mysqli_connect("localhost","root","","neural_network");
                         $sqlSelect = "SELECT * FROM stand";
                         $result = mysqli_query($conn, $sqlSelect);                                  
                     ?>                       
@@ -66,7 +66,7 @@
   </div>
 
 <footer class="main-footer">
-    <strong>Copyright &copy; 2019 <a href="#">Nadia</a>.</strong> All rights
+    <strong>Copyright &copy; 2021.</strong> All rights
     reserved.
   </footer>
 

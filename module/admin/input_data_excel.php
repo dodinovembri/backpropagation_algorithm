@@ -9,7 +9,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <?php
-                    $conn = mysqli_connect("localhost","root","","nadia");
+                    $conn = mysqli_connect("localhost","root","","neural_network");
                     require_once('./assets/vendor/php-excel-reader/excel_reader2.php');
                     require_once('./assets/vendor/SpreadsheetReader.php');
                     if (isset($_POST["import"]))

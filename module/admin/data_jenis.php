@@ -19,7 +19,7 @@
                       <div class="col-md-12">
                          <a href="?module=input_jenis"><button type="button" class="btn btn-primary">Tambahkan Data Jenis</button></a>
                  <?php
-                        $conn = mysqli_connect("localhost","root","","nadia");
+                        $conn = mysqli_connect("localhost","root","","neural_network");
                         $sqlSelect = "SELECT * FROM jenis";
                         $result = mysqli_query($conn, $sqlSelect);                                
                     ?>                       
@@ -67,7 +67,7 @@
 
 
   <footer class="main-footer">
-    <strong>Copyright &copy; 2019 <a href="#">Nadia</a>.</strong> All rights
+    <strong>Copyright &copy; 2021.</strong> All rights
     reserved.
   </footer>
 
