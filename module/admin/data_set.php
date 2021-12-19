@@ -30,7 +30,7 @@
                 <div class="col-md-12">
                  <?php
                         include 'module/koneksi.php';
-                        $sqlSelect = "SELECT data_set.id_pelanggan as id_pelanggan, data_set.nama as nama, data_set.alamat as alamat, data_set.masa_prediksi as masa_prediksi, tarip.tarip as tarip, daya.daya as daya, stand.stand as stand, merk.merk as merk, tipe.tipe as tipe, jenis.jenis as jenis, data_set.tahun as tahun, prediksi.prediksi as prediksi FROM data_set JOIN tarip ON data_set.tarip = tarip.id_tarip JOIN daya ON data_set.daya = daya.id_daya JOIN stand ON data_set.stand = stand.id_stand JOIN merk ON data_set.merk = merk.id_merk JOIN tipe ON data_set.tipe = tipe.id_tipe JOIN jenis ON data_set.jenis = jenis.id_jenis JOIN prediksi ON data_set.prediksi = prediksi.id_prediksi";
+                        $sqlSelect = "SELECT data_set.id_pelanggan as id_pelanggan, data_set.nama as nama, data_set.alamat as alamat, data_set.masa_prediksi as masa_prediksi, data_set.status as status, tarip.tarip as tarip, daya.daya as daya, stand.stand as stand, merk.merk as merk, tipe.tipe as tipe, jenis.jenis as jenis, data_set.tahun as tahun, prediksi.prediksi as prediksi FROM data_set JOIN tarip ON data_set.tarip = tarip.id_tarip JOIN daya ON data_set.daya = daya.id_daya JOIN stand ON data_set.stand = stand.id_stand JOIN merk ON data_set.merk = merk.id_merk JOIN tipe ON data_set.tipe = tipe.id_tipe JOIN jenis ON data_set.jenis = jenis.id_jenis JOIN prediksi ON data_set.prediksi = prediksi.id_prediksi";
                         $result = mysqli_query($koneksi, $sqlSelect); ?>
                          
                         <div class="panel-body table-responsive">   
@@ -68,9 +68,13 @@
                                 <td><?php  echo $row['prediksi']; ?></td>
                                 <td><?php  echo $row['masa_prediksi']; ?></td>
                                 <td>
-                                  <a href="?module=data_rusak&id_pelanggan=<?php echo $row['id_pelanggan']; ?>"><button type="button" class="btn btn-primary" onclick="return konfirmasi_rusak()">Rusak</button></a>
-                                	<a href="?module=update_data_pelanggan&id_pelanggan=<?php echo $row['id_pelanggan']; ?>"><button type="button" class="btn btn-warning">Update</button></a>
-                                	<a href="?module=hapus_data_set&id_pelanggan=<?php echo $row['id_pelanggan']; ?>"><button class="btn btn-danger" onclick="return konfirmasi()">Delete</button></a>
+                                  <?php if($row['status'] == 1){?>
+                                    <a href="?module=simpan_data_rusak&id_pelanggan=<?php echo $row['id_pelanggan']; ?>"><button type="button" class="btn btn-primary" onclick="return konfirmasi_rusak()">Rusak</button></a>
+                                    <a href="?module=update_data_pelanggan&id_pelanggan=<?php echo $row['id_pelanggan']; ?>"><button type="button" class="btn btn-warning">Update</button></a>
+                                    <a href="?module=hapus_data_set&id_pelanggan=<?php echo $row['id_pelanggan']; ?>"><button class="btn btn-danger" onclick="return konfirmasi()">Delete</button></a>
+                                  <?php }else{ ?>
+                                    <a href="void::"><button type="button" class="btn btn-primary" >Data Tidak Aktif</button></a>
+                                  <?php } ?>
                                 </td>
                             </tr>
                     <?php } ?>
