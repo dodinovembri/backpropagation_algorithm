@@ -19,7 +19,7 @@
                       <div class="col-md-12">
                          <a href="?module=input_stand"><button type="button" class="btn btn-primary">Tambahkan Data Stand</button></a>
                  <?php
-                        $conn = mysqli_connect("localhost", "dodinove_dodinove", "hs5N+=TueF-Z", "dodinove_backpropagation");
+                        include 'module/koneksi.php';
                         $sqlSelect = "SELECT * FROM stand";
                         $result = mysqli_query($conn, $sqlSelect);                                  
                     ?>                       

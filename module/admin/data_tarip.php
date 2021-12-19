@@ -19,7 +19,7 @@
                       <div class="col-md-12">
                          <a href="?module=input_tarip"><button type="button" class="btn btn-primary">Tambahkan Data Tarip</button></a>
                  <?php
-                        $conn = mysqli_connect("localhost", "dodinove_dodinove", "hs5N+=TueF-Z", "dodinove_backpropagation");
+                        include 'module/koneksi.php';
                         $sqlSelect = "SELECT * FROM tarip";
                         $result = mysqli_query($conn, $sqlSelect);                                    
                     ?>                       

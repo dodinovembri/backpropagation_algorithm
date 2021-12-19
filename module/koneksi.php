@@ -1,3 +1,4 @@
 <?php  
-	$koneksi = mysqli_connect("localhost", "dodinove_dodinove", "hs5N+=TueF-Z", "dodinove_backpropagation");
+	$koneksi = mysqli_connect("localhost", "root", "", "neural_network");
+	$conn = mysqli_connect("localhost", "root", "", "neural_network");
 ?>

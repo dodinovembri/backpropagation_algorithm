@@ -13,7 +13,7 @@
               <div class="row">
                 <div class="col-md-12">
                  <?php
-                        $conn = mysqli_connect("localhost", "dodinove_dodinove", "hs5N+=TueF-Z", "dodinove_backpropagation");
+                        include 'module/koneksi.php';
                         $sqlSelect = "SELECT stand.stand as stand, merk.merk as merk, tipe.tipe as tipe, jenis.jenis as jenis, prediksi.prediksi as target FROM dt_training JOIN tipe ON dt_training.tipe = tipe.id_tipe JOIN stand ON dt_training.stand = stand.id_stand JOIN merk ON dt_training.merk = merk.id_merk JOIN jenis ON dt_training.jenis = jenis.id_jenis JOIN prediksi ON dt_training.target = prediksi.id_prediksi GROUP BY merk, tipe, stand, jenis";                                              
                         $result = mysqli_query($conn, $sqlSelect); ?>
                       <div class="panel-body table-responsive">
