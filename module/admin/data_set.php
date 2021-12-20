@@ -51,7 +51,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                    <?php
+                              <?php if(!empty(($result))){ ?>
+                                <?php
                         $no = 0;
                         while ($row = mysqli_fetch_array($result)) {
                           $no++;
@@ -78,6 +79,8 @@
                                 </td>
                             </tr>
                     <?php } ?>
+                              <?php } ?>
+                    
                             </tbody>
                         </table>  
                         </div>                
